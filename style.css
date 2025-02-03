@@ -1,0 +1,316 @@
+/* Import font from Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@300&display=swap");
+@import url("https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css");
+
+/* 
+   * {
+     margin: 0; 
+     padding: 0; 
+     box-sizing: border-box; 
+     font-family: 'Cairo', sans-serif; 
+   } 
+   
+   - Resets default browser styles for all elements.
+   - Sets margin, padding, and box-sizing for consistent styling.
+   - Specifies the font family to be used.
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Cairo', sans-serif;
+}
+
+/* 
+   body {
+     display: flex; 
+     justify-content: center; 
+     align-items: center; 
+     min-height: 100vh; 
+     overflow: hidden; 
+     background: #dcd9cd; 
+   } 
+   
+   - Centers the content both horizontally and vertically.
+   - Sets the minimum height of the viewport to the full screen height.
+   - Prevents any content from overflowing the viewport.
+   - Sets the background color of the body.
+*/
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+  background: #dcd9cd;
+}
+
+/* 
+   ul {
+     position: relative; 
+   } 
+   
+   - Sets the position of the unordered list to relative, 
+     allowing for absolute positioning of child elements within it.
+*/
+ul {
+  position: relative;
+}
+
+/* 
+   ul li {
+     list-style: none; 
+     text-align: center; 
+   } 
+   
+   - Removes the default bullet points from the list items.
+   - Centers the text within each list item.
+*/
+ul li {
+  list-style: none;
+  text-align: center;
+}
+
+/* 
+   ul li a {
+     color: #333; 
+     text-decoration: none; 
+     font-size: 3em; 
+     padding: 5px 20px; 
+     display: inline-flex; 
+     font-weight: 700; 
+     transition: 0.5s; 
+   } 
+   
+   - Sets the color, font size, padding, and font weight for the links.
+   - Removes the default underline from the links.
+   - Enables smooth transitions for CSS properties.
+*/
+ul li a {
+  color: #333;
+  text-decoration: none;
+  font-size: 3em;
+  padding: 5px 20px;
+  display: inline-flex;
+  font-weight: 700;
+  transition: 0.5s;
+}
+
+/* 
+   ul:hover li a {
+     color: #0002; 
+   } 
+   
+   - Changes the color of links when the mouse hovers over the unordered list.
+*/
+ul:hover li a {
+  color: #0002;
+}
+
+/* 
+   ul li:hover a {
+     color: #000; 
+     background: transparent; 
+   } 
+   
+   - Changes the color and removes any background color of links 
+     when the mouse hovers over the list item.
+*/
+ul li:hover a {
+  color: #000;
+  background: transparent;
+}
+
+/* 
+   ul li a:before {
+     content: ""; 
+     position: absolute; 
+     top: 50%; 
+     left: 40%; 
+     transform: translate(-50%, -50%); 
+     display: flex; 
+     justify-content: center; 
+     align-items: center; 
+     font-size: 5em; 
+     color: rgba(0, 0, 0, 0.1); 
+     border-radius: 50%; 
+     z-index: -1; 
+     opacity: 0; 
+     font-weight: 900; 
+     text-transform: uppercase; 
+     letter-spacing: 500px; 
+     transition: letter-spacing 0.5s, left 0.5s; 
+   } 
+   
+   - Creates a pseudo-element before each link.
+   - Positions, styles, and animates the pseudo-element 
+     for the initial state (invisible).
+*/
+ul li a:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5em;
+  color: rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  z-index: -1;
+  opacity: 0;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 500px;
+  transition: letter-spacing 0.5s, left 0.5s;
+}
+
+/* 
+   ul li a:hover:before {
+     content: attr(data-text); 
+     opacity: 1; 
+     left: 50%; 
+     letter-spacing: 10px; 
+     width: 1800px; 
+     height: 1800px; 
+   } 
+   
+   - Changes the content, opacity, position, letter-spacing, 
+     and dimensions of the pseudo-element on hover.
+     - `attr(data-text)` dynamically retrieves the value 
+       of the `data-text` attribute from the link.
+*/
+ul li a:hover:before {
+  content: attr(data-text);
+  opacity: 1;
+  left: 50%;
+  letter-spacing: 10px;
+  width: 1800px;
+  height: 1800px;
+}
+
+/* 
+   ul li:nth-child(6n + 1) a:before {
+     background: #0470fe; 
+   } 
+   
+   - Applies a specific background color to the pseudo-element 
+     of every 6th list item.
+*/
+ul li:nth-child(6n + 1) a:before {
+  background: #0470fe;
+}
+
+/* 
+   ul li:nth-child(6n + 2) a:before {
+     background: #ff7675; 
+   } 
+   
+   - Applies a specific background color to the pseudo-element 
+     of every 6th list item.
+*/
+ul li:nth-child(6n + 2) a:before {
+  background: #ff7675;
+}
+
+/* 
+   ul li:nth-child(6n + 3) a:before {
+     background: #1582fe; 
+   } 
+   
+   - Applies a specific background color to the pseudo-element 
+     of every 6th list item.
+*/
+ul li:nth-child(6n + 3) a:before {
+  background: #1582fe;
+}
+
+/* 
+   ul li:nth-child(6n + 4) a:before {
+     background: #a29bfe; 
+   } 
+   
+   - Applies a specific background color to the pseudo-element 
+     of every 6th list item.
+*/
+ul li:nth-child(6n + 4) a:before {
+  background: #a29bfe;
+}
+
+/* 
+   ul li:nth-child(6n + 5) a:before {
+     background: #fd79a8; 
+   } 
+   
+   - Applies a specific background color to the pseudo-element 
+     of every 6th list item.
+*/
+ul li:nth-child(6n + 5) a:before {
+  background: #fd79a8;
+}
+
+/* 
+   ul li:nth-child(6n + 6) a:before {
+     background: #ffeaa7; 
+   } 
+   
+   - Applies a specific background
+
+ /* Footer Specific Styles (Keep these separate or integrate as you prefer) */
+ .footer {
+  background-color: #f8f9fa;
+  padding: 20px 0;
+  color: #343a40;
+}
+
+.footer h4 {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer li {
+  margin-bottom: 5px;
+}
+
+.footer a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.social-icons {
+  display: flex;
+}
+
+.social-icons li {
+  margin-right: 10px;
+}
+
+.social-icons a {
+  font-size: 20px;
+  color: #343a40;
+}
+
+.social-icons a:hover {
+  color: #007bff;
+}
+
+.footer .text-center {
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .footer .col-md-4 {
+    margin-bottom: 20px;
+  }
+}
